@@ -25,3 +25,5 @@ sidecar-pose/**/__pycache__
 *.face.json
 *.muscle.json
 vault.db*
+
+MotionHarvest-Plan.md
