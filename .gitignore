@@ -1,0 +1,27 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Node / Vite
+node_modules
+dist
+dist-ssr
+
+# Rust / Tauri
+src-tauri/target
+src-tauri/gen
+
+# Python Sidecar
+sidecar-pose/.venv
+sidecar-pose/__pycache__
+sidecar-pose/**/__pycache__
+*.pyc
+
+# Vault / Temp artifacts
+*.rawperf.json
+*.bvh
+*.face.json
+*.muscle.json
+vault.db*

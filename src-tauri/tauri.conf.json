@@ -1,0 +1,47 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "MotionHarvest Studio",
+  "version": "1.0.0",
+  "identifier": "com.motionharvest.studio",
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "pnpm build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "MotionHarvest Studio — Free Full Edition v1.0",
+        "width": 1440,
+        "height": 900,
+        "minWidth": 1120,
+        "minHeight": 720,
+        "resizable": true,
+        "fullscreen": false,
+        "dragDropEnabled": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.ico"
+    ],
+    "resources": {
+      "../blender-addon/motion_harvest_bridge.py": "blender-addon/motion_harvest_bridge.py",
+      "../sidecar-pose/pyproject.toml": "sidecar-pose/pyproject.toml",
+      "../sidecar-pose/*.py": "sidecar-pose/",
+      "../sidecar-pose/backends/*.py": "sidecar-pose/backends/",
+      "libs/WebView2Loader.dll": "WebView2Loader.dll"
+    }
+  }
+}

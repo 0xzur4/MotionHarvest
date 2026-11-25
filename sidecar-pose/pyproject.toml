@@ -1,0 +1,18 @@
+[project]
+name = "motionharvest-sidecar"
+version = "1.0.0"
+description = "MotionHarvest Studio AI Sidecar — Fast (MediaPipe), Studio CUDA (RTMPose3D), and Anime 2D (DWPose + MotionBERT + AnimeFace)"
+requires-python = ">=3.12"
+dependencies = [
+    "mediapipe>=0.10.14",
+    "opencv-python-headless>=4.10.0",
+    "numpy>=1.26.4",
+    "onnxruntime>=1.19.0",
+]
+
+[project.optional-dependencies]
+cuda = [
+    "torch>=2.4.0",
+    "onnxruntime-gpu>=1.19.0",
+    "ultralytics>=8.3.0",
+]
